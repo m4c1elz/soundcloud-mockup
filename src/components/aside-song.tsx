@@ -1,5 +1,4 @@
-import { Play, Heart, Repeat2, MessageSquare } from "lucide-react"
-import { Avatar } from "./avatar"
+import { Play, Heart, Repeat2, MessageSquare, Ellipsis } from "lucide-react"
 
 type AsideSongProps = {
     cover: string
@@ -21,8 +20,15 @@ export function AsideSong({
     commentCount,
 }: AsideSongProps) {
     return (
-        <div className="flex items-center gap-2">
-            <Avatar image={cover} className="w-12 rounded-none" />
+        <div className="group relative flex items-center gap-2 hover:cursor-pointer">
+            <div className="relative flex aspect-square w-10 flex-shrink-0 items-center justify-center overflow-hidden bg-zinc-600 object-contain">
+                <img src={cover} alt="" />
+                <div className="absolute inset-0 hidden place-content-center group-hover:grid">
+                    <div className="rounded-full bg-orange-500 p-1 text-white">
+                        <Play fill="white" size={15} />
+                    </div>
+                </div>
+            </div>
             <div className="space-y-px">
                 <p className="text-xs text-black/60">{artist}</p>
                 <p className="text-xs">{song}</p>
@@ -44,6 +50,18 @@ export function AsideSong({
                         <p className="text-xs">{commentCount}</p>
                     </div>
                 </div>
+            </div>
+            <div className="absolute -right-14 flex items-center gap-2 opacity-0 group-hover:opacity-100">
+                <button className="rounded-sm border p-1.5">
+                    <Heart
+                        size={15}
+                        className="text-orange-500"
+                        fill="#f97316"
+                    />
+                </button>
+                <button className="rounded-sm border p-1.5">
+                    <Ellipsis size={15} />
+                </button>
             </div>
         </div>
     )

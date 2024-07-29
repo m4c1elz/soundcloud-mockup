@@ -30,7 +30,7 @@ export const likedSongs: LikedSongsType = [
     {
         cover: "https://i1.sndcdn.com/artworks-eUAKXJ23oYk0njhM-fT2yWw-t50x50.jpg",
         artist: "Hydraa (@hydrails)",
-        song: "Pills",
+        song: "Butter",
         playCount: 2344,
         likes: 122,
         commentCount: 21,

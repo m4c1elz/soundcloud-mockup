@@ -7,7 +7,7 @@ interface NewTrackArtistProps {
 
 export function NewTrackArtist({ image, name }: NewTrackArtistProps) {
     return (
-        <div className="space-y-2">
+        <div className="space-y-2 hover:cursor-pointer">
             <Avatar className="w-12" image={image} />
             <p>{name}</p>
         </div>

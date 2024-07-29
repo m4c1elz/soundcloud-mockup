@@ -13,7 +13,7 @@ export function Navbar() {
             <div className="flex h-full divide-x divide-stone-900">
                 <a
                     href="#"
-                    className="grid h-full w-24 place-content-center px-2 text-sm text-white text-white/60 hover:text-white"
+                    className="grid h-full w-24 place-content-center bg-gray-950 px-2 text-sm text-white hover:text-white"
                 >
                     Início
                 </a>

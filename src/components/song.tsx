@@ -8,7 +8,7 @@ export function Song({ artist, imageUrl, title }: SongProps) {
         <div className="space-y-2">
             <div className="group relative aspect-square w-44 bg-slate-500">
                 <img src={imageUrl} className="" />
-                <div className="absolute inset-0 hidden h-full w-full items-center justify-center bg-gradient-to-b from-transparent to-black/60 group-hover:flex">
+                <div className="absolute inset-0 flex h-full w-full cursor-pointer items-center justify-center bg-gradient-to-b from-transparent to-black/60 opacity-0 transition-opacity group-hover:opacity-100">
                     <div className="aspect-square w-12 rounded-full bg-orange-500 p-3">
                         <PlayIcon className="text-white" fill="white" />
                     </div>
